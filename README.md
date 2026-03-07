@@ -43,11 +43,6 @@ but this version is a different codebase focused on:
 
 3D enclosure files are included in [`document/enclosure/`](document/enclosure):
 
-- [`document/enclosure/ESP32_CYD_Case.stl`](document/enclosure/ESP32_CYD_Case.stl)
-- [`document/enclosure/ESP32_CYD_Cover.stl`](document/enclosure/ESP32_CYD_Cover.stl)
-- [`document/enclosure/ESP32 CYD Case.skp`](document/enclosure/ESP32%20CYD%20Case.skp)
-- [`document/enclosure/ESP32 CYD Case.skb`](document/enclosure/ESP32%20CYD%20Case.skb)
-
 ## Software Stack
 
 - PlatformIO (Arduino framework)
