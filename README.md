@@ -97,7 +97,7 @@ sketch/
 - Different source layout and implementation details.
 
 ## Quick start, flash and go, no code needed
-- [Flash Firmware Online for 2.8"](https://vaandcob.github.io/webpage/src/index.html)
+- [Flash Firmware Online" ](https://vaandcob.github.io/webpage/src/index.html)
 
 ## License
 
