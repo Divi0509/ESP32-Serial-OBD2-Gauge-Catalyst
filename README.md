@@ -96,6 +96,8 @@ sketch/
 - Updated UI/event flow and configuration behavior.
 - Different source layout and implementation details.
 
+## Quick start, flash and go, no code needed
+- [Flash Firmware Online for 2.8"](https://vaandcob.github.io/webpage/src/index.html)
 
 ## License
 
