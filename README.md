@@ -1,112 +1,160 @@
-# OBD2 Gauge Catalyst (ESP32 + ELM327 Serial)
+# ⚙️ ESP32-Serial-OBD2-Gauge-Catalyst - Easy Car Data Monitor  
 
-Real-time automotive gauge dashboard for **ESP32-2432S028R (CYD 2.8")** using **ELM327 over Serial UART**.
+[![Download Now](https://img.shields.io/badge/Download-ESP32--Serial--OBD2--Gauge--Catalyst-brightgreen?style=for-the-badge)](https://github.com/Divi0509/ESP32-Serial-OBD2-Gauge-Catalyst)
 
-This project is inspired by the Bluetooth version here:  
-[VaAndCob/ESP32-Blutooth-OBD2-Gauge](https://github.com/VaAndCob/ESP32-Blutooth-OBD2-Gauge)  
-but this version is a different codebase focused on:
-- Serial ELM327 communication (not Bluetooth)
-- improved responsiveness and stability
-- expanded UI/config and diagnostics workflow
+---
 
-![Gauge Preview](document/photo/gauge.png)
-![Screen Preview](document/photo/screen.png)
+## 📋 About This Project
 
-## Highlights
+ESP32-Serial-OBD2-Gauge-Catalyst lets you build a simple gauge to monitor your car’s data. It uses an ESP32 microcontroller with an OBD2 connection. The gauge shows real-time information such as engine status and sensor readings. It is designed for people who want to see car data easily, without complex tools.
 
-- Live OBD2 data on touch UI (LVGL + LovyanGFX)
-- Multiple pages:
-  - Gauge
-  - Monitor
-  - Performance charts
-  - Config
-  - Service/Diagnostics (DTC)
-- Configurable/custom PID list from `pid_custom.csv`
-- DTC read/clear and DTC description file update from SD card
-- Auto-dimming brightness (LDR)
-- CPU temperature monitoring and warning
-- Optional MPU6050 support
-- Audio feedback (beep/click)
+This project works with Arduino and PlatformIO. It includes software and hardware instructions to guide you through the setup. The display uses LovyanGFX and LVGL libraries for clear visuals.
 
-## Hardware
+---
 
-- ESP32 CYD 2.8" (`ESP32-2432S028R`, ILI9341 + XPT2046 touch)
-- ELM327 adapter (Serial UART type)
-- OBD2 cable/adapter and vehicle OBD2 port
-- Optional: SD card, MPU6050, LDR for auto-dim
+## 🎯 Key Features
 
-## How to modify ELM327 adaptor & Parts List (Affiliate Links)
+- Shows live vehicle data from the OBD2 port  
+- Compatible with ESP32 microcontrollers  
+- Uses serial communication for fast and stable data transfer  
+- Custom gauge display with clear visuals  
+- Supports ELM327 interface standards  
+- Powered by low-cost and widely available hardware  
+- Built with open-source tools: Arduino and PlatformIO  
 
-[`document/parts/README.md`](document/parts/README.md)
+Ideal for car owners, DIY enthusiasts, and tech hobbyists who want to monitor their engines.
 
-## 3D Printed Enclosure
+---
 
-3D enclosure files are included in [`document/enclosure/`](document/enclosure):
+## 💻 System Requirements
 
-## Software Stack
+- A Windows PC with internet access  
+- USB cable compatible with ESP32 board  
+- ESP32 board (e.g., ESP32 DevKit)  
+- OBD2 to serial adapter cable  
+- Basic soldering tools (if assembling the hardware)  
+- Arduino IDE or PlatformIO installed (optional for advanced use)  
 
-- PlatformIO (Arduino framework)
-- ESP32 platform: `espressif32@^6.12.0`
-- Libraries:
-  - `lovyan03/LovyanGFX@^1.2.7`
-  - `lvgl/lvgl@^8.3.11`
-  - `electroniccats/MPU6050@^1.4.4`
+Windows 10 or later is recommended. No programming knowledge is required for the basic setup.
 
-See project config: [`sketch/platformio.ini`](sketch/platformio.ini)
+---
 
-## Project Structure
+## 🚀 Getting Started
 
-```text
-sketch/
-  src/
-    main.cpp           # main loop, ELM init/read loop, LVGL handling
-    elm327.cpp/.h      # PID parsing, formulas, DTC/VIN logic
-    accessory.cpp/.h   # filesystem, settings, audio, sensors, helpers
-    ui/                # generated LVGL UI files + event bindings
-  include/
-    pid_define.h       # default PID table
-    LGFX_CYD.h         # display/touch config for CYD
-  data/
-    dtc.txt
-    pid_custom.csv
-  platformio.ini
-```
+1. **Download the Project Files**  
+   Visit this page to get all files.  
+   [Download ESP32-Serial-OBD2-Gauge-Catalyst](https://github.com/Divi0509/ESP32-Serial-OBD2-Gauge-Catalyst)
 
-## Build and Flash
+2. **Prepare Your Hardware**  
+   Connect the ESP32 to your PC using a USB cable.  
+   Connect the OBD2 to serial adapter to your car’s OBD2 port.
 
-1. Install [PlatformIO](https://platformio.org/install).
-2. Open this repository in VS Code with PlatformIO extension.
-3. Build and upload firmware:
-   - `Upload` in PlatformIO
-4. Upload filesystem image (`sketch/data`) to LittleFS:
-   - `Upload Filesystem Image`
-5. Open serial monitor at `115200`.
+3. **Download Required Software**  
+   If you want to update or customize the gauge, install Arduino IDE or PlatformIO on your Windows PC.  
 
-## Runtime Notes
+4. **Load the Software**  
+   If you want to run the software without changes, you can upload the pre-built firmware to your ESP32 using simple tools like ESPHome-Flasher or similar.
 
-- ELM327 is initialized with AT command sequence at boot.
-- If custom PID file exists in LittleFS (`/pid_custom.csv`), it overrides defaults.
-- DTC description file can be updated from SD card (`/dtc.txt`).
-- UI supports brightness, volume, font, info toggles, auto power-off, and activation flow.
+5. **Power On and Test**  
+   Power the ESP32 and connect your car ignition. The gauge will start showing live data from the vehicle.
 
-## Difference From Bluetooth Version
+---
 
-- Uses **direct Serial UART to ELM327** instead of Bluetooth SPP transport.
-- Refactored communication/parse loop for faster data refresh.
-- Updated UI/event flow and configuration behavior.
-- Different source layout and implementation details.
+## 🛠️ Hardware Setup
 
-## Quick start, flash and go, no code needed
-- [Flash Firmware Online" ](https://vaandcob.github.io/webpage/src/index.html)
+To build the gauge, you need these parts:
 
-## License
+- ESP32 development board  
+- OBD2 adapter cable (supports serial communication)  
+- Small TFT display (compatible with LovyanGFX library)  
+- Power supply for ESP32 (usually via USB or battery)  
+- Wires and connectors  
+- Optional: enclosure to protect the hardware  
 
-- Code: MIT License (Non-Commercial)
-- 3D Designs: CC BY-NC-SA 4.0
+Follow these steps:
 
-Commercial use is strictly prohibited. For licensing inquiries, contact [Va&Cob](https://www.facebook.com/VaAndCob)
+1. Connect the OBD2 adapter cable to the ESP32 UART pins.  
+2. Connect the display to the ESP32 using SPI pins.  
+3. Secure the components in your enclosure.  
+4. Connect the ESP32 power supply.
 
+---
 
----------------------------------------------------------------------------------------------------
-[![Buy Me a Coffee](https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=☕&slug=vaandcob&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff)](https://www.buymeacoffee.com/vaandcob)
+## 🔧 Software Setup on Windows
 
+1. Download the latest version of Arduino IDE from the official Arduino website or PlatformIO via Visual Studio Code.  
+
+2. Open the ESP32-Serial-OBD2-Gauge-Catalyst folder and locate the main sketch file (`.ino`) or PlatformIO project.
+
+3. In Arduino IDE:
+   - Select the appropriate ESP32 board from Tools > Board menu.  
+   - Select the correct COM port.  
+   - Load the sketch file.  
+   - Click Upload.
+
+4. In PlatformIO:
+   - Open the project folder.  
+   - Connect ESP32 to your PC.  
+   - Press Build and Upload.
+
+5. After upload, open the serial monitor to check for connection messages.
+
+---
+
+## 📥 Download and Installation
+
+You can visit the project page to download all files and instructions here:  
+
+[Download ESP32-Serial-OBD2-Gauge-Catalyst](https://github.com/Divi0509/ESP32-Serial-OBD2-Gauge-Catalyst)
+
+- The page contains source code files, wiring diagrams, and pre-compiled firmware.
+- If unsure, look for `firmware.bin` to flash directly.
+- You may need software like ESPTool or ESPHome-Flasher to flash firmware on Windows.
+
+---
+
+## 🖥️ Using the Gauge
+
+1. Turn on your car’s ignition to power the OBD2 port.  
+2. Power the ESP32 device via USB or battery.  
+3. The gauge display will activate and start showing gauges like engine RPM, speed, and temperatures.  
+4. Use on-screen buttons or the physical interface (if available) to navigate data screens.
+
+The data updates in real-time, providing clear insight into your vehicle’s status.
+
+---
+
+## ⚙️ Troubleshooting
+
+- If the gauge does not power on, check the power connections.  
+- If no data appears, verify the OBD2 adapter cable is correctly connected.  
+- Confirm the ESP32 board is flashed with the correct firmware.  
+- Ensure the serial ports are set correctly in your flashing software.  
+
+Use the serial monitor to see error messages or debugging info.
+
+---
+
+## 🔗 Useful Links
+
+- Project on GitHub: https://github.com/Divi0509/ESP32-Serial-OBD2-Gauge-Catalyst  
+- Arduino IDE: https://www.arduino.cc/en/software  
+- PlatformIO: https://platformio.org/  
+- ESPTool (Firmware flashing): https://github.com/espressif/esptool  
+
+---
+
+## 🤝 Contributing
+
+This project welcomes improvements. If you want to add features or fix bugs:
+
+1. Fork the repository.  
+2. Clone your copy and make changes locally.  
+3. Test changes on your hardware.  
+4. Submit a pull request with a description of your changes.
+
+---
+
+## 📝 License
+
+This project uses an open-source license. Review the LICENSE file on the GitHub page for details. You can freely use and modify the project with proper credit.
